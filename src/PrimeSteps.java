@@ -12,7 +12,6 @@ public class PrimeSteps {
         System.out.print("Would you like to generate a random number or input a number? (R/I)");
         String answer = key.nextLine();
 
-        //boolean isPrime = true;
         boolean run = true;
         while(run) {
             if (answer.equalsIgnoreCase("R")) {
@@ -20,11 +19,8 @@ public class PrimeSteps {
             } else if (answer.equalsIgnoreCase("I")) {
                 System.out.println("Please enter a number: ");
             }
-            //break;
 
-        //}
             boolean isPrime = true; //boolean variable to check if the num is prime
-
 
             //Part 1 ----With user input------------------------------------------------>
             while(answer.equalsIgnoreCase("I")) {
@@ -41,6 +37,7 @@ public class PrimeSteps {
                 }
                 break;
             }
+
             //part 2 ------------------------------------------------------------>
             Random r = new Random();
             int x = 1 + r.nextInt(250);
@@ -63,25 +60,22 @@ public class PrimeSteps {
             }
 
             //Step 4 --------Ask the user if he/she would like to try again?
-
+            System.out.println();//space
             System.out.print("Would you like to try again? (Y/N)");
             String answer2 = key.next();
-            //System.out.println("it takes n ");
 
             if (answer2.equalsIgnoreCase("N")) {
-                System.out.println("it takes n ");
                 run = false;
             }
             else if(answer2.equalsIgnoreCase("Y")) {
-
+                System.out.println();//space
                 System.out.print("Would you like to generate a random number or input a number? (R/I)");
                 answer = key.next();
             }
-            System.out.println(run);
 
         }//end of while
-        //end of the main method ---------->
-    }
+
+    } //end of the main method ---------->
 
 }
 
